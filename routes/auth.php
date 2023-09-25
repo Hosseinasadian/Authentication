@@ -41,6 +41,7 @@ Route::middleware('guest')->group(function () {
     Route::get('/google-auth/callback', function () {
         $user = Socialite::driver('google')->user();
 
+        dd($user);
         // $user->token
     });
 });
